@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="edu.hawaii.ics466"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk android:minSdkVersion="15" />
+
+    <application
+        android:icon="@drawable/happy_face"
+        android:label="@string/app_name" >
+        
+        <activity 
+          android:name=".LearnActivity"/>
+        <activity 
+          android:name=".PrepareActivity"/>
+        <activity 
+          android:name=".TestActivity"/>
+        <activity 
+          android:name=".InfoActivity"/>
+        <activity
+            android:label="Social First Aid"
+            android:name="edu.hawaii.ics466.MainActivity"
+            android:theme="@style/custom1" >
+            <intent-filter >
+                <action android:name="android.intent.action.MAIN" />                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+</manifest>

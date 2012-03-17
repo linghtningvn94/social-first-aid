@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+<color name="Alice_Blue">#F0F8FF</color>
+<color name="Antique_White">#FAEBD7</color>
+<color name="Aqua">#00FFFF</color>
+<color name="Aquamarine">#7FFFD4</color>
+<color name="Azure">#F0FFFF</color>
+<color name="Blue">#0000FF</color>
+<color name="Purple">#8A2BE2</color>
+<color name="Brown">#A52A2A</color>
+<color name="Gray">#A9A9A9</color>
+<color name="Green">#008000</color>
+<color name="Red">#FF0000</color>
+<color name="Light_Green">#00FF00</color>
+<color name="Dark_Blue">#191970</color>
+<color name="White">#FFFFFF</color>
+<color name="Yellow">#FFFF00</color>
+<color name ="Black">#000000</color>
+
+</resources>
