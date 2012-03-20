@@ -1,7 +1,7 @@
 package edu.hawaii.ics466;
 
 /**
- * Content object. 
+ * Content object
  * An object that holds the problem and its solution.
  * @author Alexander Cam Liu
  *
