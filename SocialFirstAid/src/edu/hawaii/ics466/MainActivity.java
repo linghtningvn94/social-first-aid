@@ -57,6 +57,6 @@ public class MainActivity extends TabActivity {
     tabHost.addTab(infoTab);
     
     // Set the initial selected tab
-    tabHost.setCurrentTab(0);   
+    tabHost.setCurrentTab(0);
   }
 }

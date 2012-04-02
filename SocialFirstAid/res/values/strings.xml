@@ -3,5 +3,7 @@
 
     <string name="hello">Hello World, SocialFirstAidActivity!</string>
     <string name="app_name">Social First Aid</string>
+    <string name="childmis1">You should be authorative with a misbehaving child.</string>
+    <string name="childmis2">You should always be hostile with a misbehaving child.</string>
 
 </resources>
