@@ -8,33 +8,22 @@
         android:id="@+id/Question"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/childmis"/>
+        android:text="@string/childmis3"/>
     <RadioGroup
+        android:id="@+id/ChildMisbehave1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" >
  
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Be authoritative" />
+            android:text="True" />
  
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Address their reaction" />        
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Calm Yourself" />
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Administer punishment" />
         <RadioButton
             android:id="@+id/Correct"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="All of the above" />
+            android:text="False" />
  
     </RadioGroup>
  

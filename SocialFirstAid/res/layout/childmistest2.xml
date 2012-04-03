@@ -15,17 +15,15 @@
         android:layout_height="wrap_content" >
  
         <RadioButton
-            android:id="@+id/Wrong"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Yes" 
-            android:checked="true" />
+            android:text="True" />
  
         <RadioButton
             android:id="@+id/Correct"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="No" />
+            android:text="False" />
  
     </RadioGroup>
  
@@ -42,6 +40,12 @@
         android:id="@+id/next"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Next Question"/>
+        android:text="Next Question"
+        android:onClick="selectQuestion"/>
+    <Button
+        android:id="@+id/listing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Return to Listing"/>
  
 </LinearLayout>

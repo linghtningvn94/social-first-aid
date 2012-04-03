@@ -17,16 +17,30 @@ import android.widget.TextView;
 public class TestActivity extends Activity {
   
   private RadioButton correct;
-  private Button submit;
   private TextView review;
+  private int question = 2;
   
   /** 
-   * Initial start for the test page. Default to the first ChildMisbehaving test question.
+   * Initial start for the test page. 
    */
   public void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);    
-    setContentView(R.layout.childmistest);
-    createTest();
+    super.onCreate(savedInstanceState);
+    listing();
+  }
+  
+  /**
+   * Listing of all current tests to take by subject.
+   */
+  public void listing() {
+    setContentView(R.layout.testlisting); 
+    Button childMis = (Button) findViewById(R.id.childMis);    
+    childMis.setOnClickListener(new OnClickListener() {   
+      @Override
+      public void onClick(View v) {
+        setContentView(R.layout.childmistest);
+        createTest();
+      }   
+    });
   }
 
   /**
@@ -34,7 +48,8 @@ public class TestActivity extends Activity {
    * Values in each layout xml file will have different correct answers.
    */
   public void createTest() {
-    submit = (Button) findViewById(R.id.Submit);    
+    Button submit = (Button) findViewById(R.id.Submit); 
+    Button listing = (Button) findViewById(R.id.listing);
     correct = (RadioButton) findViewById(R.id.Correct);
     review = (TextView) findViewById(R.id.Review);
     review.setText("Click the Submit button after selecting your answer.");    
@@ -46,18 +61,43 @@ public class TestActivity extends Activity {
           review.setText("Correct!");
         }
         else {
-          review.setText("Wrong!");
+          String rightAnswer = "Wrong! The correct answer is: " + correct.getText() + ".";
+          review.setText(rightAnswer);
         }   
+      }   
+    });
+    
+    listing.setOnClickListener(new OnClickListener() {   
+      @Override
+      public void onClick(View v) {
+        listing();
       }   
     });
   }
   
   /**
-   * Access the layout for the second question
-   * @param view View of question 2.
+   * Access the layout for the next question.
+   * @param view View of next question.
    */
-  public void question2(View view) {
-    setContentView(R.layout.childmistest2);
-    createTest();
+  public void selectQuestion(View view) {   
+    // Random generator = new Random(System.currentTimeMillis());
+    // int question = generator.nextInt();
+    switch(question) {
+      case 2:
+        question++;
+        setContentView(R.layout.childmistest2);
+        createTest();
+        break;
+        
+      case 3:
+        question++;
+        setContentView(R.layout.childmistest3);
+        createTest();
+        break;
+        
+      case 4:
+        setContentView(R.layout.childmistest4);
+        createTest();
+    }
   }
 }
