@@ -14,8 +14,6 @@ public class PrepareActivity extends Activity {
   public void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
 
-    TextView textview = new TextView(this);
-    textview.setText("Prepare for Social Situations");
-    setContentView(textview);
+    setContentView(R.layout.forum);
   }
 }
