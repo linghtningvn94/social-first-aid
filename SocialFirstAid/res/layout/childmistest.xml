@@ -9,6 +9,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/childmis"/>
+    
     <RadioGroup
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" >
@@ -34,29 +35,47 @@
             android:id="@+id/Correct"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="All of the above" />
- 
+            android:text="All of the above" /> 
     </RadioGroup>
- 
+
+  <LinearLayout
+    android:id="@+id/linearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    
     <Button
         android:id="@+id/Submit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="150dp"
+        android:layout_height="70dp"
+        android:textSize="12.0sp"
         android:text="Submit Answer"/>
+    
+    <Button
+      android:id="@+id/next"
+      android:layout_width="150dp"
+      android:layout_height="70dp"
+      android:background="@drawable/button_right_arrow"
+      android:onClick="selectQuestionChild"
+      android:gravity="center_horizontal|center_vertical"/>
+    </LinearLayout>
+           
     <TextView
         android:id="@+id/Review"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
-    <Button
-        android:id="@+id/next"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Next Question"
-        android:onClick="selectQuestion"/>
+        android:textSize="18.0sp"/>
+
+  <RelativeLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
     <Button
-        android:id="@+id/listing"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Return to Listing"/>
- 
+      android:id="@+id/listing"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="Return to Listing" 
+      android:textSize="12.0sp"
+      android:onClick="listing"
+      android:layout_alignParentBottom="true"
+      android:layout_alignParentLeft="true"/>
+    </RelativeLayout> 
 </LinearLayout>
