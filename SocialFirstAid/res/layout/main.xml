@@ -19,7 +19,23 @@
       android:id="@android:id/tabcontent"
       android:layout_width="fill_parent"
       android:layout_height="fill_parent"
-      android:padding="5dp" />
+      android:padding="15dp"> 
+      
+        <ListView 
+            android:id="@android:id/list"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+        </ListView>
+      
+        <ExpandableListView 
+            android:id="@android:id/list"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+        </ExpandableListView>
+        
+        
+      
+    </FrameLayout>
   
   </LinearLayout>
 </TabHost>
