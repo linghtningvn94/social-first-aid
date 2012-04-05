@@ -1,5 +1,6 @@
 package edu.hawaii.ics466;
 
+import java.text.DecimalFormat;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
@@ -22,8 +23,8 @@ public class TestActivity extends Activity {
   private Button next;
   private TextView review;
   private int question = 2;
-  private double correctAnswers;
-  private double totalAnswers;
+  private int correctAnswers;
+  private int totalAnswers;
   
   /** 
    * Initial start for the test page. 
@@ -39,10 +40,19 @@ public class TestActivity extends Activity {
   public void listing() {
     question = 2;
     setContentView(R.layout.testlisting); 
-    Button childMis = (Button) findViewById(R.id.childMis);    
+    Button childMis = (Button) findViewById(R.id.childMis);
+    Button publicTox = (Button) findViewById(R.id.publicTox);
+    
     childMis.setOnClickListener(new OnClickListener() {   
       public void onClick(View v) {
         setContentView(R.layout.childmistest);
+        createTest();
+      }   
+    });
+    publicTox.setOnClickListener(new OnClickListener() {   
+      @Override
+      public void onClick(View v) {
+        setContentView(R.layout.publictoxtest);
         createTest();
       }   
     });
@@ -72,8 +82,12 @@ public class TestActivity extends Activity {
           review.setText("Correct!");
           correctAnswers++;
         }
+        else if ((question == 6) && (!correct.isChecked())) {
+          review.setText("Wrong..... R U Cereal??");
+        }
         else {
-          String rightAnswer = "Wrong! The correct answer is: " + correct.getText() + ".";
+          String rightAnswer = "Wrong! The correct answer is: " + "\n" + 
+                                correct.getText() + ".";
           review.setText(rightAnswer);
         }   
       }   
@@ -90,11 +104,11 @@ public class TestActivity extends Activity {
    * Access the layout for the next question.
    * @param view View of next question.
    */
-  public void selectQuestionChild(View view) {   
+  public void selectQuestionChild(View v) {   
     /** Deprecated until a larger number of questions are created.
      *
      * Random generator = new Random(System.currentTimeMillis());
-     * int question = generator.nextInt();
+     * int question = generator.nextInt(51);
      * 
      */
     switch(question) {
@@ -117,8 +131,47 @@ public class TestActivity extends Activity {
         break;
         
       case 5:
+        question++;
+        setContentView(R.layout.childmistest5);
+        createTest();
+        break;
+      case 6:
         outputResults();
     }
+  }
+  
+  /**
+   * Select questions for public intoxication.
+   * @param v
+   */
+  public void selectQuestionTox(View v) {
+    switch(question) {
+    case 2:
+      question++;
+      setContentView(R.layout.publictoxtest2);
+      createTest();
+      break;
+      
+    case 3:
+      question++;
+      setContentView(R.layout.publictoxtest3);
+      createTest();
+      break;
+      
+    case 4:
+      question++;
+      setContentView(R.layout.publictoxtest4);
+      createTest();
+      break;
+      
+    case 5:
+      question++;
+      setContentView(R.layout.publictoxtest5);
+      createTest();
+      break;
+    case 6:
+      outputResults();
+    }  
   }
   
   /**
@@ -144,26 +197,27 @@ public class TestActivity extends Activity {
    * @return String output to user.
    */
   public String score() {
-    double percentage = (correctAnswers / totalAnswers) * 100;
-    double wrongAnswers = totalAnswers - correctAnswers;
-    String correct = (int)correctAnswers + " correct answers";
-    String wrong = (int)wrongAnswers + " answers wrong";
+    double percentage = ((double)correctAnswers / (double)totalAnswers);
+    int wrongAnswers = totalAnswers - correctAnswers;
+    String correct = correctAnswers + " correct answers";
+    String wrong = wrongAnswers + " wrong answers";
     
-    if ((int)correctAnswers == 1) {
+    DecimalFormat df = new DecimalFormat("#.##%");
+    if (correctAnswers == 1) {
       correct = "1 answer correct";
     }
-    else if ((int)correctAnswers == 0) {
+    else if (correctAnswers == 0) {
       correct = "nothing correct";
     }
     
-    if ((int)wrongAnswers == 1) {
+    if (wrongAnswers == 1) {
       wrong = "1 answer wrong";
     }
-    else if((int)wrongAnswers == 0) {
+    else if(wrongAnswers == 0) {
       wrong = "nothing wrong";
     }
     return "You got " + correct + " and " + wrong + " for a score of " + 
-           percentage + "%" + "\n" + recommendation(percentage);
+           df.format(percentage) + "\n" + "\n" + recommendation(percentage);
   }
   
   /**

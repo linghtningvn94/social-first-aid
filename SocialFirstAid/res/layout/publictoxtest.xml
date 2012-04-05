@@ -8,24 +8,31 @@
         android:id="@+id/Question"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/childmis3"/>
+        android:text="@string/publictox"/>
+    
     <RadioGroup
-        android:id="@+id/ChildMisbehave1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" >
  
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="True" />
- 
+            android:text="Assess the Situation" />        
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Call the Authorities" />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Be careful" />
         <RadioButton
             android:id="@+id/Correct"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="False" />
- 
+            android:text="All of the above" /> 
     </RadioGroup>
+
   <LinearLayout
     android:id="@+id/linearLayout"
     android:layout_width="match_parent"
@@ -47,7 +54,7 @@
       android:layout_width="125dp"
       android:layout_height="50dp"
       android:background="@drawable/button_right_arrow"
-      android:onClick="selectQuestionChild"
+      android:onClick="selectQuestionTox"
       android:gravity="center_horizontal|center_vertical"/>
     </LinearLayout>
            

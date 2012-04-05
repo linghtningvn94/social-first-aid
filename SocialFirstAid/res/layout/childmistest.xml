@@ -39,21 +39,25 @@
     </RadioGroup>
 
   <LinearLayout
-    android:id="@+id/linearLayout1"
+    android:id="@+id/linearLayout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
     
     <Button
         android:id="@+id/Submit"
-        android:layout_width="150dp"
-        android:layout_height="70dp"
-        android:textSize="12.0sp"
-        android:text="Submit Answer"/>
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:background="@drawable/button_submit"
+        android:textSize="12.0sp"/>
+    
+    <Space 
+      android:layout_width="50dp"
+      android:layout_height="0dp"/>
     
     <Button
       android:id="@+id/next"
-      android:layout_width="150dp"
-      android:layout_height="70dp"
+      android:layout_width="125dp"
+      android:layout_height="50dp"
       android:background="@drawable/button_right_arrow"
       android:onClick="selectQuestionChild"
       android:gravity="center_horizontal|center_vertical"/>
@@ -63,7 +67,7 @@
         android:id="@+id/Review"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="18.0sp"/>
+        android:textSize="14.0sp"/>
 
   <RelativeLayout
       android:layout_width="match_parent"

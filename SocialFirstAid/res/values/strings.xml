@@ -3,9 +3,17 @@
 
     <string name="hello">Hello World, SocialFirstAidActivity!</string>
     <string name="app_name">Social First Aid</string>
-    <string name="childmis">You should do the following when confronted with a misbehaving child.</string>
+    <!--  Questions for Child Misbehaving -->
+    <string name="childmis">You should do the following when confronted with a misbehaving child:</string>
     <string name="childmis2">You should be authorative with a misbehaving child.</string>
     <string name="childmis3">Punishments to a misbehaving child should always be more severe than their action.</string>
-    <string name="childmis4">You should always be calm when administering punishment to a misbehaving child</string>
-
+    <string name="childmis4">You should always be calm when administering punishment to a misbehaving child.</string>
+    <string name="childmis5">It is OK to hit a child....</string>
+    
+    <!-- Questions for Public Intoxication -->
+    <string name="publictox">You should do the following when confronted with an intoxicated person:</string>
+    <string name="publictox2">If confronted with a dangerous intoxicated person stay away from heavy populated areas.</string>
+    <string name="publictox3">Always try to forcefully take away an intoxicated persons car keys.</string>
+    <string name="publictox4">If in doubt call the police.</string>
+    <string name="publictox5">You should always try to help the person even in a dangerous situation.</string>
 </resources>

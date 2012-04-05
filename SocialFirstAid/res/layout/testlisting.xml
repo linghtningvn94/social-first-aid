@@ -8,5 +8,13 @@
         android:id="@+id/childMis"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/buttonshape"
         android:text="Misbehaving Child"/>
+
+<Button
+        android:id="@+id/publicTox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/buttonshape"
+        android:text="Public Intoxication "/>
 </LinearLayout>

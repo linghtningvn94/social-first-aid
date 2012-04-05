@@ -11,9 +11,9 @@
         android:label="@string/app_name" >
         
         <activity 
-          android:name=".LearnActivity"/>
+          android:name=".CounselActivity"/>
         <activity 
-          android:name=".PrepareActivity"/>
+          android:name=".ForumActivity"/>
         <activity 
           android:name=".TestActivity"/>
         <activity 

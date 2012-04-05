@@ -3,12 +3,5 @@
 <resources>
 <style name="custom1" parent="android:Theme.Holo.Light"> 
   <item name="android:textColor">@color/Black</item>
-  <item name="android:textAppearance">@style/CustomTabWidgetText</item>
   </style>
-
-<style name="CustomTabWidgetText" parent="@android:style/TextAppearance.Widget.TabWidget">
-  <item name="android:textSize">10sp</item>
-  <item name="android:textStyle">italic</item>
-</style>
-
 </resources>

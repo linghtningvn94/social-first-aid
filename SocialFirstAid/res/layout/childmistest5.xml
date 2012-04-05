@@ -8,7 +8,7 @@
         android:id="@+id/Question"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/childmis3"/>
+        android:text="@string/childmis5"/>
     <RadioGroup
         android:id="@+id/ChildMisbehave1"
         android:layout_width="wrap_content"
@@ -17,15 +17,23 @@
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="True" />
- 
+            android:text="After Lunch" />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="After a romantic evening" />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Before a swim" />
         <RadioButton
             android:id="@+id/Correct"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="False" />
+            android:text="Never" /> 
  
     </RadioGroup>
+ 
   <LinearLayout
     android:id="@+id/linearLayout"
     android:layout_width="match_parent"
