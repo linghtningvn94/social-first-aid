@@ -5,9 +5,18 @@
     android:orientation="vertical"
     android:padding="5dp"
     android:color="#5672FF">
+
+    <ExpandableListView
+        android:id="@+id/expandableListView1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:text="blah blah">
+
+    </ExpandableListView>
     
 <TextView
-        android:id="@+id/info_location"
+        android:id="@+id/public_assault_steps"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:padding="10dp"
