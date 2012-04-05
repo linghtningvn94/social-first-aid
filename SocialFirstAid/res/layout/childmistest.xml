@@ -17,37 +17,43 @@
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Be authoritative" />
+            android:text="Be authoritative"
+            android:textSize="14sp" />
  
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Address their reaction" />        
+            android:text="Address their reaction"
+            android:textSize="14sp" />        
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Calm Yourself" />
+            android:text="Calm Yourself"
+            android:textSize="14sp" />
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Administer punishment" />
+            android:text="Administer punishment"
+            android:textSize="14sp" />
         <RadioButton
             android:id="@+id/Correct"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="All of the above" /> 
+            android:text="All of the above"
+            android:textSize="14sp" /> 
     </RadioGroup>
 
-  <LinearLayout
+ <LinearLayout
     android:id="@+id/linearLayout"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
     
+    
     <Button
         android:id="@+id/Submit"
         android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:background="@drawable/button_submit"
+        android:layout_height="40dp"
+        android:background="@drawable/button_custom1"
         android:textSize="12.0sp"/>
     
     <Space 
@@ -67,18 +73,21 @@
         android:id="@+id/Review"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="14.0sp"/>
+        android:textSize="18.0sp"
+        android:gravity="center"
+        android:background="#58FAF4"/>
 
   <RelativeLayout
       android:layout_width="match_parent"
       android:layout_height="match_parent">
     <Button
       android:id="@+id/listing"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
+      android:layout_width="200dp"
+      android:layout_height="50dp"
       android:text="Return to Listing" 
-      android:textSize="12.0sp"
+      android:textSize="15.0sp"
       android:onClick="listing"
+      android:background="@drawable/button_custom1"
       android:layout_alignParentBottom="true"
       android:layout_alignParentLeft="true"/>
     </RelativeLayout> 

@@ -45,6 +45,7 @@ public class TestActivity extends Activity {
     
     childMis.setOnClickListener(new OnClickListener() {   
       public void onClick(View v) {
+        totalAnswers = correctAnswers = 0;
         setContentView(R.layout.childmistest);
         createTest();
       }   
@@ -52,6 +53,7 @@ public class TestActivity extends Activity {
     publicTox.setOnClickListener(new OnClickListener() {   
       @Override
       public void onClick(View v) {
+        totalAnswers = correctAnswers = 0;
         setContentView(R.layout.publictoxtest);
         createTest();
       }   
@@ -69,12 +71,14 @@ public class TestActivity extends Activity {
     correct = (RadioButton) findViewById(R.id.Correct);
     review = (TextView) findViewById(R.id.Review);
     
+    submit.setText("Submit");
     review.setText("Select answer and click Submit.");    
     next.setEnabled(false);
-    
+   
     submit.setOnClickListener(new OnClickListener() {   
       public void onClick(View v) {
         submit.setEnabled(false);
+        submit.setText("");
         next.setEnabled(true);
         totalAnswers++;
         
@@ -95,6 +99,7 @@ public class TestActivity extends Activity {
     
     listing.setOnClickListener(new OnClickListener() {   
       public void onClick(View v) {
+        totalAnswers = correctAnswers = 0;
         listing();
       }   
     });
@@ -182,8 +187,6 @@ public class TestActivity extends Activity {
     TextView results = (TextView) findViewById(R.id.Results);
     results.setText(score());
     listing = (Button) findViewById(R.id.listing);
-    totalAnswers = correctAnswers = 0;
-    
     listing.setOnClickListener(new OnClickListener() {   
       public void onClick(View v) {
         listing();
@@ -217,7 +220,7 @@ public class TestActivity extends Activity {
       wrong = "nothing wrong";
     }
     return "You got " + correct + " and " + wrong + " for a score of " + 
-           df.format(percentage) + "\n" + "\n" + recommendation(percentage);
+           df.format(percentage) + "\n" + "\n" + recommendation(percentage * 100);
   }
   
   /**
@@ -227,15 +230,15 @@ public class TestActivity extends Activity {
    * @return String qualitatively telling the user how they did
    */
   public String recommendation(double grade) {
-    String recommendation = "You did very well on this test!";    
     
     if (grade < 70.00) {
-      recommendation =  "You should probably take this test again...";
+      return "You should probably take this test again...";
     }
-    else if ((grade <= 80.00) && (grade > 69.99)) {
-      recommendation = "You did OK on this test.";
+    else if ((grade >= 70.00) && (grade < 85.00)) {
+      return "You did OK on this test.";
     }
-    
-    return recommendation;
+    else {
+      return "You did very well on this test!";
+    }
   }
 }

@@ -10,8 +10,11 @@
         android:layout_height="wrap_content"/>
 
     <Button
-        android:id="@+id/listing"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Return to Listing"/>
+      android:id="@+id/listing"
+      android:layout_width="200dp"
+      android:layout_height="50dp"
+      android:text="Return to Listing" 
+      android:textSize="15.0sp"
+      android:onClick="listing"
+      android:background="@drawable/button_custom1"/>
 </LinearLayout>
