@@ -41,7 +41,6 @@ public class TestActivity extends Activity {
     setContentView(R.layout.testlisting); 
     Button childMis = (Button) findViewById(R.id.childMis);    
     childMis.setOnClickListener(new OnClickListener() {   
-      @Override
       public void onClick(View v) {
         setContentView(R.layout.childmistest);
         createTest();
@@ -64,7 +63,6 @@ public class TestActivity extends Activity {
     next.setEnabled(false);
     
     submit.setOnClickListener(new OnClickListener() {   
-      @Override
       public void onClick(View v) {
         submit.setEnabled(false);
         next.setEnabled(true);
@@ -82,7 +80,6 @@ public class TestActivity extends Activity {
     });
     
     listing.setOnClickListener(new OnClickListener() {   
-      @Override
       public void onClick(View v) {
         listing();
       }   
@@ -135,7 +132,6 @@ public class TestActivity extends Activity {
     totalAnswers = correctAnswers = 0;
     
     listing.setOnClickListener(new OnClickListener() {   
-      @Override
       public void onClick(View v) {
         listing();
       }   

@@ -29,11 +29,11 @@ public class MainActivity extends TabActivity {
       .setIndicator("Learn", ressources.getDrawable(R.drawable.learn_select))
       .setContent(learnIntent);
 
-    // Prep tab
+    // Forum tab
     Intent prepIntent = new Intent().setClass(this, PrepareActivity.class);
     TabSpec prepTab = tabHost
-      .newTabSpec("Prep")
-      .setIndicator("Prep", ressources.getDrawable(R.drawable.prep_select))
+      .newTabSpec("Forum")
+      .setIndicator("Forum", ressources.getDrawable(R.drawable.prep_select))
       .setContent(prepIntent);
     
     // Test tab

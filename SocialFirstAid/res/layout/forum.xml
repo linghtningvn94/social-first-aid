@@ -2,63 +2,110 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal" >
+    android:orientation="vertical" >
    
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    	android:layout_width="wrap_content"
+    	android:layout_width="match_parent"
     	android:layout_height="wrap_content"
-   		android:orientation="vertical" >
+    	android:orientation="horizontal" >
+    
+    	<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    		android:layout_width="wrap_content"
+    		android:layout_height="wrap_content"
+   			android:orientation="vertical" >
+   		
+       		<TextView
+       		    android:id="@+id/login_username"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="40dp"
+       		    android:textStyle="bold"
+       		    android:text="Email / Facebook Login" />
+
+        	<EditText
+            	android:id="@+id/username_textfield"
+           		android:layout_width="150dp"
+            	android:layout_height="wrap_content" />
+
+        	<TextView
+            	android:id="@+id/login_password"
+            	android:layout_width="wrap_content"
+            	android:textStyle="bold"
+            	android:layout_height="40dp"
+            	android:text="Password" />
+
+        	<EditText
+            	android:id="@+id/password_textfield"
+            	android:layout_width="150dp"
+            	android:layout_height="wrap_content" />
    		
-        <TextView 
-            android:id="@+id/login_username"
-        	android:layout_width="wrap_content"
-        	android:layout_height="wrap_content"
-        	android:text="Email / Facebook Login"/>
-
-        <EditText
-            android:id="@+id/username_textfield"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content" />
-
-        <TextView
-            android:id="@+id/login_password"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Password" />
-
-        <EditText
-            android:id="@+id/password_textfield"
-            android:layout_width="150dp"
-            android:layout_height="wrap_content" />
-   		
-     </LinearLayout>
+     	</LinearLayout>
      
 
-     <LinearLayout
-         xmlns:android="http://schemas.android.com/apk/res/android"
-         android:layout_width="match_parent"
-         android:layout_height="match_parent"
-         android:gravity="center_horizontal"
-         android:orientation="vertical" >
+     	<LinearLayout
+        	xmlns:android="http://schemas.android.com/apk/res/android"
+         	android:layout_width="match_parent"
+         	android:layout_height="match_parent"
+         	android:gravity="center_horizontal"
+         	android:orientation="vertical" >
    		
-       <Button 
-           	android:id="@+id/sign_in"
-           	android:layout_width="wrap_content"
-        	android:layout_height="wrap_content"
-        	android:background="@drawable/buttonshape"
-           	android:textSize="10dp"
-        	android:text="Sign in"/>
+       		<Button 
+           		android:id="@+id/sign_in"
+           		android:layout_width="wrap_content"
+        		android:layout_height="wrap_content"
+        		android:background="@drawable/buttonshape"
+        		android:layout_marginTop="10dp"
+        		android:layout_marginBottom="40dp"
+           		android:textSize="10dp"
+        		android:text="Sign in"/>
 
-       <Button
-           android:id="@+id/nologin"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:background="@drawable/buttonshape"
-           android:paddingLeft="5dp"
-           android:paddingRight="5dp"
-           android:textSize="10dp"
-           android:text="Proceed without logging in" />
+       		<Button
+       		    android:id="@+id/nologin"
+       		    android:layout_width="wrap_content"
+       		    android:layout_height="wrap_content"
+       		    android:background="@drawable/buttonshape"
+       		    android:paddingLeft="5dp"
+       		    android:paddingRight="5dp"
+       		    android:text="Proceed without logging in"
+       		    android:textSize="10dp" />
     
-     </LinearLayout>
+     	</LinearLayout>
 
+    </LinearLayout>
+        <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center|top"
+        android:orientation="vertical"
+        android:paddingTop="10dp" >
+
+    <TextView
+        android:id="@+id/create_account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:textStyle="bold"
+        android:typeface="serif"  
+        android:text="Create new Account" />
+    
+    <TextView
+        android:id="@+id/forgot_account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+       	android:textStyle="bold"
+       	android:typeface="serif"  
+        android:text="Forgot Account / Password ?" />
+    
+    <TextView
+        android:id="@+id/forgot_account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:textStyle="bold"
+        android:typeface="serif"  
+        android:text="Help" />
+    
+    </LinearLayout>
+    
 </LinearLayout>

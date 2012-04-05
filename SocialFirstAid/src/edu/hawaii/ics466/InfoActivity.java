@@ -34,7 +34,6 @@ public class InfoActivity extends ListActivity {
     lv.setTextFilterEnabled(true);
     
     lv.setOnItemClickListener(new OnItemClickListener() {
-      @Override
       public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         Toast.makeText(getApplicationContext(), ((TextView) view).getText(), 
             Toast.LENGTH_SHORT).show();

@@ -13,7 +13,6 @@ import android.widget.TextView;
 public class PrepareActivity extends Activity {
   public void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-
     setContentView(R.layout.forum);
   }
 }
