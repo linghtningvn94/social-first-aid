@@ -7,6 +7,7 @@
     <uses-sdk android:minSdkVersion="15" />
     
     <uses-permission android:name="android.permission.INTERNET"/>
+    <compatible-screens></compatible-screens>
 
     <application
         android:icon="@drawable/happy_face"
@@ -28,6 +29,16 @@
                 <action android:name="android.intent.action.MAIN" />                <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name="HomeActivity"/>
+        <activity android:name="PublicActivity"/>
+        <activity android:name="WorkActivity"/>
+        <activity android:name="SchoolActivity"/>
+        <!-- Home Activities -->
+        <!-- Public Activities -->
+        <activity android:name="PublicAssaultActivity"/>
+        <!-- School Activities -->  
+        <!-- Work Activities -->
+
     </application>
     
 </manifest>
