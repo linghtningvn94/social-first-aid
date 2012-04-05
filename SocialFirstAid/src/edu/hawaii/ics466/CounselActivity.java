@@ -2,7 +2,9 @@ package edu.hawaii.ics466;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.widget.TextView;
+import android.view.Menu;
+import android.view.MenuInflater;
+
 
 /**
  * Sets the current display in the Learn tab
@@ -11,11 +13,9 @@ import android.widget.TextView;
  *
  */
 public class CounselActivity extends Activity {
-  public void onCreate(Bundle savedInstanceState) {
-    super.onCreate(savedInstanceState);
-    
-    TextView textview = new TextView(this);
-    textview.setText("Find Counselors");
-    setContentView(textview);
-  }
+	public void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+
+		    setContentView(R.layout.counselor);
+		  }
 }
