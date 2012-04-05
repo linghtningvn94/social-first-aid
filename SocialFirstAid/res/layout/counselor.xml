@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout 
-    android:orientation="vertical" 
-    android:gravity="center_horizontal" 
-    android:layout_height="match_parent" 
-    android:layout_width="match_parent" 
-    xmlns:android="http://schemas.android.com/apk/res/android">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
    
     <LinearLayout 
-        android:orientation="horizontal" 
-        android:gravity="center_horizontal|center_vertical" 
         android:layout_height="wrap_content" 
         android:layout_width="match_parent" 
         xmlns:android="http://schemas.android.com/apk/res/android" 
@@ -17,13 +13,13 @@
     	<LinearLayout 
     	    android:orientation="vertical" 
     	    android:layout_height="wrap_content" 
-    	    android:layout_width="200dp" 
+    	    android:layout_width="170dp" 
     	    xmlns:android="http://schemas.android.com/apk/res/android"> 
    		
        		<TextView 
        		    android:layout_height="wrap_content" 
        		    android:layout_width="wrap_content" 
-       		    android:textAppearance="?android:attr/textAppearanceLarge" 
+       		    android:textSize ="20dp" 
        		    android:textStyle="bold" 
        		    android:text="Sean's Counseling" 
        		    android:id="@+id/textView1"/>
@@ -31,75 +27,178 @@
         	<TextView 
         	    android:layout_height="wrap_content" 
         	    android:layout_width="wrap_content" 
-        	    android:textAppearance="?android:attr/textAppearanceSmall" 
+        	    android:textSize="10dp" 
         	    android:textStyle="italic" 
         	    android:text="2651 Kapahulu St. Suite 466 Honolulu, HI 96826" 
         	    android:id="@+id/textView2"/>
    		
      	</LinearLayout>
-     
-
-     	<LinearLayout 
-     	    android:orientation="vertical" 
-     	    android:gravity="center_horizontal|center_vertical" 
-     	    android:layout_height="wrap_content" 
+     
+     	<LinearLayout
+     	    xmlns:android="http://schemas.android.com/apk/res/android"
      	    android:layout_width="100dp"
-     	    xmlns:android="http://schemas.android.com/apk/res/android">
-   		
-       		<Button 
-       		    android:layout_height="30dp" 
-       		    android:layout_width="wrap_content" 
-       		    android:background="@drawable/buttonshape" 
-       		    android:text="Get Direction" 
-       		    android:id="@+id/button1" 
-       		    android:textSize="10dp"/> 
+     	    android:layout_height="wrap_content"
+     	    android:gravity="center_horizontal|center_vertical"
+     	    android:orientation="vertical" >
 
-       		<TextView 
-       		    android:layout_height="wrap_content" 
-       		    android:layout_width="wrap_content" 
-       		    android:textAppearance="?android:attr/textAppearanceSmall" 
-       		    android:text="5 miles" android:id="@+id/textView3" 
-       		    android:layout_marginTop="10dp"/> 
-    
+     	    <Button
+     	        android:id="@+id/button1"
+     	        android:layout_width="wrap_content"
+     	        android:layout_height="30dp"
+     	        android:layout_weight="1"
+     	        android:background="@drawable/buttonshape"
+     	        android:text="Get Direction"
+     	        android:textSize="10dp" />
+
+     	    <TextView
+     	        android:id="@+id/textView3"
+     	        android:layout_width="wrap_content"
+     	        android:layout_height="0dp"
+     	        android:layout_marginTop="10dp"
+     	        android:layout_weight="1"
+     	        android:text="5 miles"
+     	        android:textAppearance="?android:attr/textAppearanceSmall" />
      	</LinearLayout>
 
     </LinearLayout>
     
+    <LinearLayout 
+        android:layout_height="wrap_content" 
+        android:layout_width="match_parent" 
+        xmlns:android="http://schemas.android.com/apk/res/android" 
+        android:layout_marginTop="7dp"
+        android:background="@drawable/border">
+    
+    	<LinearLayout 
+    	    android:orientation="vertical" 
+    	    android:layout_height="wrap_content" 
+    	    android:layout_width="170dp" 
+    	    xmlns:android="http://schemas.android.com/apk/res/android"> 
+   		
+       		<TextView 
+       		    android:layout_height="wrap_content" 
+       		    android:layout_width="wrap_content" 
+       		    android:textSize ="18dp" 
+       		    android:textStyle="bold" 
+       		    android:text="Ardell's Counseling" 
+       		    android:id="@+id/textView4"/>
+
+        	<TextView 
+        	    android:layout_height="wrap_content" 
+        	    android:layout_width="wrap_content" 
+        	    android:textSize="10dp" 
+        	    android:textStyle="italic" 
+        	    android:text="2000 King St. Suite 311 Honolulu, HI 96826" 
+        	    android:id="@+id/textView5"/>
+   		
+     	</LinearLayout>
+     
+
+     	<LinearLayout
+     	    xmlns:android="http://schemas.android.com/apk/res/android"
+     	    android:layout_width="100dp"
+     	    android:layout_height="wrap_content"
+     	    android:gravity="center_horizontal|center_vertical"
+     	    android:orientation="vertical" >
+
+     	    <Button
+     	        android:id="@+id/button2"
+     	        android:layout_width="wrap_content"
+     	        android:layout_height="30dp"
+     	        android:layout_weight="1"
+     	        android:background="@drawable/buttonshape"
+     	        android:text="Get Direction"
+     	        android:textSize="10dp" />
+
+     	    <TextView
+     	        android:id="@+id/textView6"
+     	        android:layout_width="wrap_content"
+     	        android:layout_height="0dp"
+     	        android:layout_marginTop="10dp"
+     	        android:layout_weight="1"
+     	        android:text="10 miles"
+     	        android:textAppearance="?android:attr/textAppearanceSmall" />
+     	</LinearLayout>
+     	
+     </LinearLayout>
+     
+    <LinearLayout 
+        android:layout_height="wrap_content" 
+        android:layout_width="match_parent" 
+        xmlns:android="http://schemas.android.com/apk/res/android" 
+        android:layout_marginTop="7dp"
+        android:background="@drawable/border">
+    
+    	<LinearLayout 
+    	    android:orientation="vertical" 
+    	    android:layout_height="wrap_content" 
+    	    android:layout_width="170dp" 
+    	    xmlns:android="http://schemas.android.com/apk/res/android"> 
+   		
+       		<TextView 
+       		    android:layout_height="wrap_content" 
+       		    android:layout_width="wrap_content" 
+       		    android:textSize ="20dp" 
+       		    android:textStyle="bold" 
+       		    android:text="Alex's Counseling" 
+       		    android:id="@+id/textView7"/>
+
+        	<TextView 
+        	    android:layout_height="wrap_content" 
+        	    android:layout_width="wrap_content" 
+        	    android:textSize="10dp" 
+        	    android:textStyle="italic" 
+        	    android:text="3220 Ala Moana Blvd St. Suite 1780 Honolulu, HI 96826" 
+        	    android:id="@+id/textView8"/>
+   		
+     	</LinearLayout>
+     
+
+     	<LinearLayout
+     	    xmlns:android="http://schemas.android.com/apk/res/android"
+     	    android:layout_width="100dp"
+     	    android:layout_height="wrap_content"
+     	    android:gravity="center_horizontal|center_vertical"
+     	    android:orientation="vertical" >
+
+     	    <Button
+     	        android:id="@+id/button3"
+     	        android:layout_width="wrap_content"
+     	        android:layout_height="30dp"
+     	        android:layout_weight="1"
+     	        android:background="@drawable/buttonshape"
+     	        android:text="Get Direction"
+     	        android:textSize="10dp" />
+
+     	    <TextView
+     	        android:id="@+id/textView9"
+     	        android:layout_width="wrap_content"
+     	        android:layout_height="0dp"
+     	        android:layout_marginTop="10dp"
+     	        android:layout_weight="1"
+     	        android:text="15 miles"
+     	        android:textAppearance="?android:attr/textAppearanceSmall" />
+     	</LinearLayout>
+     	
+     </LinearLayout>
+     
     <LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center|top"
-        android:orientation="vertical"
-        android:paddingTop="10dp" >
-
-    <TextView
-        android:id="@+id/create_account"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="20dp"
-        android:textStyle="bold"
-        android:typeface="serif"  
-        android:text="Create new Account" />
-    
-    <TextView
-        android:id="@+id/forgot_account"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="20dp"
-       	android:textStyle="bold"
-       	android:typeface="serif"  
-        android:text="Forgot Account / Password ?" />
-    
-    <TextView
-        android:id="@+id/forgot_account"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="20dp"
-        android:textStyle="bold"
-        android:typeface="serif"  
-        android:text="Help" />
-    
+        android:layout_height="match_parent"
+        android:layout_marginTop="7dp"
+        android:background="@drawable/border"
+        android:gravity="center_horizontal|center_vertical" >
+     	
+        <TextView 
+       		    android:layout_height="wrap_content" 
+       		    android:layout_width="wrap_content" 
+       		    android:textSize ="20dp" 
+       		    android:textStyle="bold" 
+       		    android:typeface="monospace"
+       		    android:text="GOOGLE MAPS" 
+       		    android:id="@+id/textView10"/>
+     
     </LinearLayout>
     
 </LinearLayout>

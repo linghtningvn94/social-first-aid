@@ -44,8 +44,8 @@ public class MainActivity extends TabActivity {
     // Info tab
     Intent counselIntent = new Intent().setClass(this, CounselActivity.class);
     TabSpec counselTab = tabHost
-      .newTabSpec("Info")
-      .setIndicator("Info") 
+      .newTabSpec("Cousl")
+      .setIndicator("Cousl") 
       .setContent(counselIntent);
     
     // Add all tabs 
