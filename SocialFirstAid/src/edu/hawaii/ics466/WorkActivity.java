@@ -1,9 +1,13 @@
 package edu.hawaii.ics466;
 
 import android.app.ListActivity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListAdapter;
+import android.widget.ListView;
+import android.widget.TextView;
 
 /**
  * Sets the current Display in the Info tab
@@ -12,37 +16,31 @@ import android.widget.ListAdapter;
  *
  */
 public class WorkActivity extends ListActivity {
-  /** Call when we activate activity **/
-  @Override
+
+  TextView selection;
+  ListItem[] issues = {
+      new ListItem("Arrogant Coworkers", PublicAssaultActivity.class),
+      new ListItem("Hostile Coworkers", PublicAssaultActivity.class),
+      new ListItem("Hostile Customers/Clients", PublicAssaultActivity.class),
+      new ListItem("Overly Shy Coworkers", PublicAssaultActivity.class),
+      new ListItem("Sociopaths at Work", PublicAssaultActivity.class),
+      new ListItem("Sexual Harassment", PublicAssaultActivity.class),
+      new ListItem("Verbal Harassment", PublicAssaultActivity.class),
+      new ListItem("Work Functions", PublicAssaultActivity.class)
+  };
+
   public void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    
-    ListAdapter adapter = createAdapter();
-    setListAdapter(adapter);
+    setListAdapter(new ArrayAdapter<ListItem>(
+        this,android.R.layout.simple_list_item_1, issues));
+    selection = (TextView) findViewById(R.id.info_location);
   }
 
-  /**
-   * Creates a List adapter for HomeActivity
-   * 
-   * @return
-   */
-  private ListAdapter createAdapter() {
-    //generate the list of topics for home location
-    String[] homeTopics = new String[] {
-        "Alcoholism",
-        "Children Who Misbehave",
-        "Hostility Between Adults",
-        "Depression in Teens",
-        "Depression in Adults",
-        "Disrespectful Family Member",
-        "Rebellious Teens",
-        "Physical Abuse",
-        "Verbal Abuse"
-    };
-    
-    ListAdapter adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, 
-        homeTopics);
-    
-    return adapter;
-  }	
+
+  @Override
+  protected void onListItemClick(ListView lview, View view, int position, long id) {
+    super.onListItemClick(lview, view, position, id);
+    final Intent intent = new Intent(this, issues[position].getActivity());
+    startActivityForResult(intent, position);
+  }
 }
