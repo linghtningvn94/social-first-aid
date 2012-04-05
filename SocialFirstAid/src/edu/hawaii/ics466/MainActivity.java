@@ -2,7 +2,6 @@ package edu.hawaii.ics466;
 
 import android.app.TabActivity;
 import android.content.Intent;
-import android.content.res.Resources;
 import android.os.Bundle;
 import android.widget.TabHost;
 import android.widget.TabHost.TabSpec;
@@ -19,22 +18,21 @@ public class MainActivity extends TabActivity {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.main);
 
-    Resources ressources = getResources(); 
     TabHost tabHost = getTabHost(); 
     
     // Learning tab
-    Intent learnIntent = new Intent().setClass(this, LearnActivity.class);
-    TabSpec learnTab = tabHost
-      .newTabSpec("Learn")
-      .setIndicator("Learn", ressources.getDrawable(R.drawable.learn_select))
-      .setContent(learnIntent);
+    Intent infoIntent = new Intent().setClass(this, InfoActivity.class);
+    TabSpec infoTab = tabHost
+      .newTabSpec("Info")
+      .setIndicator("Info")
+      .setContent(infoIntent);
 
     // Forum tab
-    Intent prepIntent = new Intent().setClass(this, PrepareActivity.class);
-    TabSpec prepTab = tabHost
+    Intent forumIntent = new Intent().setClass(this, ForumActivity.class);
+    TabSpec forumTab = tabHost
       .newTabSpec("Forum")
-      .setIndicator("Forum", ressources.getDrawable(R.drawable.prep_select))
-      .setContent(prepIntent);
+      .setIndicator("Forum")
+      .setContent(forumIntent);
     
     // Test tab
     Intent testIntent = new Intent().setClass(this, TestActivity.class);
@@ -44,17 +42,17 @@ public class MainActivity extends TabActivity {
       .setContent(testIntent);
     
     // Info tab
-    Intent infoIntent = new Intent().setClass(this, InfoActivity.class);
-    TabSpec infoTab = tabHost
+    Intent counselIntent = new Intent().setClass(this, CounselActivity.class);
+    TabSpec counselTab = tabHost
       .newTabSpec("Info")
       .setIndicator("Info") 
-      .setContent(infoIntent);
+      .setContent(counselIntent);
     
     // Add all tabs 
-    tabHost.addTab(learnTab);
-    tabHost.addTab(prepTab);
-    tabHost.addTab(testTab);
     tabHost.addTab(infoTab);
+    tabHost.addTab(forumTab);
+    tabHost.addTab(testTab);
+    tabHost.addTab(counselTab);
     
     // Set the initial selected tab
     tabHost.setCurrentTab(0);
